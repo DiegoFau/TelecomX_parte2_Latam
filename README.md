@@ -11,52 +11,11 @@ El objetivo principal de este análisis es **predecir la cancelación de cliente
 
 ---
 
-# 2. Estructura del proyecto
-
-El proyecto se organiza de la siguiente manera:
-
-```
-TelecomX-Churn-Analysis
-│
-├── data
-│   ├── telecom_churn_clean.csv
-│
-├── notebooks
-│   ├── TelecomX_Parte2_Modelos.ipynb
-│
-├── visuals
-│   ├── distribucion_churn.png
-│   ├── correlaciones.png
-│   ├── importancia_variables.png
-│
-├── README.md
-```
-
-### Descripción de carpetas y archivos
-
-**data/**  
-Contiene los datos ya tratados y preparados para el modelado.
-
-- `telecom_churn_clean.csv`: dataset limpio utilizado para entrenar los modelos.
-
-**notebooks/**  
-Contiene el cuaderno principal del análisis.
-
-- `TelecomX_Parte2_Modelos.ipynb`: notebook donde se realiza la preparación de datos, entrenamiento de modelos, evaluación y análisis de variables relevantes.
-
-**visuals/**  
-Carpeta opcional que puede contener gráficos generados durante el análisis exploratorio de datos (EDA) o durante la interpretación de resultados.
-
-**README.md**  
-Documento que describe el proyecto, su estructura, metodología y forma de ejecución.
-
----
-
-# 3. Preparación de los datos
+# 2. Preparación de los datos
 
 Antes de entrenar los modelos, se realizó un proceso de preparación y transformación de los datos.
 
-## 3.1 Clasificación de variables
+## 2.1 Clasificación de variables
 
 Las variables del dataset fueron clasificadas en dos tipos principales:
 
@@ -90,7 +49,7 @@ Estas variables se utilizaron directamente para el entrenamiento del modelo.
 
 ---
 
-## 3.2 Codificación de variables categóricas
+## 2.2 Codificación de variables categóricas
 
 Las variables categóricas se transformaron utilizando **one-hot encoding**, generando variables binarias (0 o 1). Esto permite que los modelos interpreten correctamente las distintas categorías sin asumir un orden entre ellas.
 
@@ -113,7 +72,7 @@ InternetService_No
 
 ---
 
-## 3.3 Separación de datos de entrenamiento y prueba
+## 2.3 Separación de datos de entrenamiento y prueba
 
 Para evaluar correctamente el rendimiento de los modelos, el conjunto de datos se dividió en:
 
@@ -131,11 +90,11 @@ Esto permite evaluar cómo se comporta el modelo frente a datos que no ha visto 
 
 ---
 
-# 4. Modelización
+# 3. Modelización
 
 Para el análisis se implementaron dos modelos principales:
 
-## 4.1 Regresión logística
+## 3.1 Regresión logística
 
 La regresión logística es un modelo estadístico utilizado para problemas de clasificación binaria. En este caso, se utilizó para estimar la probabilidad de que un cliente cancele el servicio.
 
@@ -149,7 +108,7 @@ Los coeficientes obtenidos permiten analizar cómo cada variable afecta la proba
 
 ---
 
-## 4.2 Árbol de decisión
+## 3.2 Árbol de decisión
 
 El árbol de decisión es un modelo basado en reglas que divide el conjunto de datos en función de variables que reducen la impureza en cada nodo.
 
@@ -163,7 +122,7 @@ La importancia de variables obtenida del árbol permitió identificar los factor
 
 ---
 
-# 5. Análisis exploratorio de datos (EDA)
+# 4. Análisis exploratorio de datos (EDA)
 
 Durante el análisis exploratorio se realizaron distintos gráficos para comprender mejor el comportamiento de los clientes.
 
@@ -195,7 +154,7 @@ Estas variables muestran una fuerte relación con la cancelación de clientes.
 
 ---
 
-# 6. Principales insights del análisis
+# 5. Principales insights del análisis
 
 Los resultados del análisis permitieron identificar algunos factores clave asociados al churn:
 
@@ -209,9 +168,9 @@ Estos hallazgos pueden ayudar a diseñar estrategias de retención más efectiva
 
 ---
 
-# 7. Cómo ejecutar el proyecto
+# 6. Cómo ejecutar el proyecto
 
-## 7.1 Requisitos
+## 6.1 Requisitos
 
 Para ejecutar el proyecto es necesario instalar las siguientes bibliotecas de Python:
 
@@ -231,7 +190,7 @@ pip install pandas numpy matplotlib seaborn scikit-learn
 
 ---
 
-## 7.2 Ejecución del notebook
+## 6.2 Ejecución del notebook
 
 1. Clonar el repositorio o descargar los archivos del proyecto.
 2. Abrir el notebook ubicado en:
@@ -258,7 +217,7 @@ El cuaderno realizará automáticamente:
 
 ---
 
-# 8. Conclusión
+# 7. Conclusión
 
 Este proyecto demuestra cómo el uso de técnicas de análisis de datos y aprendizaje automático puede ayudar a comprender el comportamiento de los clientes y anticipar la cancelación del servicio.
 
